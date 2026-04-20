@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تصفح الأدوات - شاركها</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="m17 5-5-3-5 3"></path><path d="m17 19-5 3-5-3"></path><path d="M2 12h20"></path><path d="m5 17-3-5 3-5"></path><path d="m19 17 3-5-3-5"></path></svg>
+        شاركها
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="search.html" class="active">تصفح الأدوات</a></li>
+        <li><a href="dashboard.html">لوحة التحكم</a></li>
+        <li><a href="register.html" class="btn btn-primary" style="color: white;">حساب جديد</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Search Layout -->
+  <div class="container search-layout">
+    <!-- Sidebar Filters -->
+    <aside class="filter-sidebar glass-panel">
+      <div class="filter-group">
+        <h4>تصفية حسب الكلية</h4>
+        <select id="faculty-filter" class="form-control">
+          <option value="all">الكل (بدون تصفية)</option>
+          <option value="engineering">هندسة</option>
+          <option value="medicine">طب / صيدلة / أسنان</option>
+          <option value="science">علوم</option>
+          <option value="arts">فنون جميلة / تطبيقية</option>
+        </select>
+      </div>
+      
+      <div class="filter-group mt-4">
+        <h4>نطاق السعر (اليومي)</h4>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <input type="number" class="form-control" placeholder="من" min="0">
+          <span>-</span>
+          <input type="number" class="form-control" placeholder="إلى" min="0">
+        </div>
+        <button class="btn btn-outline mt-2" style="width: 100%;">تطبيق</button>
+      </div>
+    </aside>
+
+    <!-- Results Grid -->
+    <main>
+      <div class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>نتائج البحث</h2>
+        <span style="color: var(--text-muted);">يعرض أحدث الأدوات المضافة</span>
+      </div>
+      
+      <div class="tools-grid" id="search-results" style="padding-top: 0;">
+        <!-- Tools will be injected here by script.js -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 منصة شاركها. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

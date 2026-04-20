@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - شاركها</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="m17 5-5-3-5 3"></path><path d="m17 19-5 3-5-3"></path><path d="M2 12h20"></path><path d="m5 17-3-5 3-5"></path><path d="m19 17 3-5-3-5"></path></svg>
+        شاركها
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="search.html">تصفح الأدوات</a></li>
+        <li><a href="dashboard.html" class="active">لوحة التحكم</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Dashboard Layout -->
+  <div class="container dashboard-layout">
+    <div class="dashboard-header">
+      <div>
+        <h2>مرحباً، طالب علوم حاسب 👋</h2>
+        <p class="text-muted">نظرة عامة على نشاطك في المنصة.</p>
+      </div>
+      <a href="add-tool.html" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        إضافة أداة جديدة
+      </a>
+    </div>
+    
+    <div class="glass-panel" style="padding: 2rem;">
+      <div class="dashboard-tabs">
+        <button class="tab-btn active" data-target="my-tools">أدواتي المعروضة (2)</button>
+        <button class="tab-btn" data-target="my-requests">طلبات استعارتي (1)</button>
+      </div>
+      
+      <!-- Section: My Tools -->
+      <div id="my-tools" class="dashboard-section animate-in">
+        <div class="tools-grid">
+          <!-- Mock Item 1 -->
+          <div class="tool-card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" alt="أردوينو" class="tool-img">
+            <div class="tool-info">
+              <span class="tool-category">هندسة حاسبات</span>
+              <h3 class="tool-title">أردوينو أونو مع ملحقات</h3>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                <span class="tool-price">15 ج.م / يوم</span>
+                <span class="badge" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71;">متاح</span>
+              </div>
+            </div>
+          </div>
+          <!-- Mock Item 2 -->
+          <div class="tool-card">
+            <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&q=80&w=800" alt="بالطو" class="tool-img">
+            <div class="tool-info">
+              <span class="tool-category">طب / علوم</span>
+              <h3 class="tool-title">بالطو معمل أبيض (M)</h3>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                <span class="tool-price">10 ج.م / يوم</span>
+                <span class="badge" style="background: rgba(231, 76, 60, 0.1); color: #e74c3c;">مستعار حالياً</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Section: My Borrowing Requests -->
+      <div id="my-requests" class="dashboard-section animate-in" style="display: none;">
+        <div style="background: white; border-radius: var(--radius-sm); padding: 1.5rem; border: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center;">
+          <div style="display: flex; gap: 1.5rem; align-items: center;">
+            <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&q=80&w=200" alt="حاسبة" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+            <div>
+              <h3 style="margin-bottom: 0.25rem;">آلة حاسبة علمية Casio</h3>
+              <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--text-muted);">المالك: محمد علي • المدة: 3 أيام</p>
+            </div>
+          </div>
+          <div style="text-align: left;">
+            <span class="badge" style="background: rgba(241, 196, 15, 0.1); color: #f39c12; margin-bottom: 0.5rem; display: inline-block;">قيد المراجعة</span>
+            <div style="font-weight: 800; color: var(--text-main);">الإجمالي: 60 ج.م</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 منصة شاركها. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
